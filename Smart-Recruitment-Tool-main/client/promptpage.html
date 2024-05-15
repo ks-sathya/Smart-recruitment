@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url('https://careers.brillio.com/wp-content/themes/brilliotheme/assets/why_brillionew-scaled.jpg');
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .topnav {
+            background-color: #000000;
+            height: 40px;
+            padding: 0px 30px;
+            margin-top: -16px;
+        }
+
+        .topnav li {
+            color: #22D374;
+            list-style: none;
+            font-weight: 300;
+            padding: 10px;
+        }
+
+        .brillioicon {
+            position: fixed;
+            height: 40px;
+            width: 100px;
+            right: 10px;
+        }
+
+        .recruitment {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: rgba(256, 256, 256, 0.5);
+        }
+
+        .rec {
+            width: 90%;
+            height: 30%;
+            margin: 3%;
+        }
+
+        .result {
+            width: 90%;
+            height: 40% !important;
+            margin: 3%;
+        }
+
+        .flex-container {
+            width: 90%;
+            position: absolute;
+        }
+
+        .sub-container {
+            height: 30%;
+            overflow: scroll;
+        }
+
+        .sub-res {
+            height: 40% !important;
+            background: rgba(0, 0, 0, 0.5);
+            overflow: scroll;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+        }
+
+        .icon {
+            width: 26px;
+            height: 26px;
+        }
+
+        input {
+            width: 88%;
+            height: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Brillio_company_logo.png" class="brillioicon">
+            <nav class="topnav">
+                <ul>
+                    <li>SMART RECRUITMENT TOOL</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="recruitment">
+        <div class="rec">Recruitment Query:
+            <div class="flex-container sub-container">
+                <input type="text" id="prompt">
+                <button type="submit" onclick="" class="button"><img
+                        src="https://icons.iconarchive.com/icons/hopstarter/button/256/Button-Next-icon.png"
+                        class="icon"></button>
+            </div>
+        </div>
+		
+        <div class="result">Result:<div class="flex-container  sub-res">
+                <!-- 
+                    gets data from backend
+                -->
+				
+            </div>
+
+        </div>
+		<br>
+		<h1 class="faq-page">
+		<li><a href="index.html" target="_blank">Frequently Asked Questions</a></li></h1>
+    
+	</div>
+	
+
+</body>
+</head>
+
+</html>

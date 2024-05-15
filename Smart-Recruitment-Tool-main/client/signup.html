@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="signup.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.css">
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/litepicker.js"></script>
+      
+      
+
+      
+      
+   </head>
+   <title> Signup Form</title>
+   <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <div class="container">
+         <header>Signup Form</header>
+         <div class="progress-bar">
+            <div class="step">
+               <p>
+                  Name
+               </p>
+               <div class="bullet">
+                  <span>1</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Contact
+               </p>
+               <div class="bullet">
+                  <span>2</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Birth
+               </p>
+               <div class="bullet">
+                  <span>3</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Submit
+               </p>
+               <div class="bullet">
+                  <span>4</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+         </div>
+         <div class="form-outer">
+            <form action="#">
+               <div class="page slide-page">
+                  <div class="title">
+                     Name :
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        First Name
+                     </div>
+                     <input type="text">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Last Name
+                     </div>
+                     <input type="text">
+                  </div>
+                  <div class="field">
+                     <button class="firstNext next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="title">
+                     Contact :
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Email Address
+                     </div>
+                     <input type="text" class="form-control" id="emailInput">
+                     <span class="error" id="emailError"></span>
+                  </div>
+                  <div class="field">
+                    <div class="label">
+                       Phone Number
+                    </div>
+                    <input type="number" id="phoneInput">
+                    <span class="error" id="phoneError"></span>
+                 </div>
+                  <div class="field btns">
+                     <button class="prev-1 prev">Previous</button>
+                     <button class="next-1 next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="title">
+                     Date of Birth :
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Date
+                     </div>
+                     <input type="date" id="dobInput">
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Gender
+                     </div>
+                     <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                     </select>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-2 prev">Previous</button>
+                     <button class="next-2 next">Next</button>
+                  </div>
+               </div>
+               <div class="page">
+                  <div class="title">
+                     Login Details :
+                  </div>
+                  <div class="field">
+                     <div class="label">
+                        Username
+                     </div>
+                     <input type="text">
+                  </div>
+                  <div class="field">
+                    <div class="label">
+                       Password
+                    </div>
+                    <input type="password" id="passwordInput">
+                    <span class="error" id="passwordError"></span>
+                 </div>
+                 <div class="field" style="margin-top: 40px;">
+                  <!-- Add margin-top to create space -->
+                  <div class="label">
+                    Confirm Password
+                  </div>
+                  <input type="password" id="confirmPasswordInput">
+                  <span class="error" id="confirmPasswordError"></span>
+                </div>
+                  <div class="field btns">
+                     <button class="prev-3 prev">Previous</button>
+                     <button class="submit">Submit</button>
+                  </div>
+                  <div id="emailToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; bottom: 0; width: 100%;">
+            <div class="toast-body">
+               <span id="emailError"></span>
+            </div>
+         </div>
+         <div id="phoneToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; bottom: 0; width: 100%;">
+            <div class="toast-body">
+               <span id="phoneError"></span>
+            </div>
+         </div>
+      
+
+
+               </div>
+              
+            </form>
+            <div class="form-outer">
+                <form action="#">
+                   <!-- Your existing form pages -->
+                   <!-- Add a link to the login page -->
+                   
+                   <div class="page">
+                
+                      <div class="sign-txt"> Already have an account? <a href="login.html">Login here</a></div>
+                         <!-- Your existing Previous and Next buttons -->
+                      </div>
+                   </div>
+                </form>
+             </div>
+        
+      <script src="signup.js"></script>
+      <script>
+        // Add email validation
+        const emailInput = document.getElementById('emailInput');
+      const emailError = document.getElementById('emailError');
+      const emailToast = new bootstrap.Toast(document.getElementById('emailToast'));
+
+      const phoneInput = document.getElementById('phoneInput');
+      const phoneError = document.getElementById('phoneError');
+      const phoneToast = new bootstrap.Toast(document.getElementById('phoneToast'));
+
+      let typingTimerEmail;
+      const doneTypingIntervalEmail = 1000; // 1 second
+
+      emailInput.addEventListener('input', function () {
+        clearTimeout(typingTimerEmail);
+        typingTimerEmail = setTimeout(validateEmailInput, doneTypingIntervalEmail);
+      });
+
+      emailInput.addEventListener('blur', function () {
+        clearTimeout(typingTimerEmail);
+        validateEmailInput();
+      });
+
+      function validateEmailInput() {
+        const email = emailInput.value.trim();
+        if (email === '') {
+          showErrorToast('Email is required.', emailError, emailToast);
+        } else if (!validateEmail(email)) {
+          showErrorToast('Invalid email address. Ensure it includes @ and ends with .com', emailError, emailToast);
+          disableNextButton();
+        } else {
+          hideErrorToast(emailError, emailToast);
+          enableNextButton();
+        }
+      }
+
+      function validateEmail(email) {
+        // Regular expression for a valid email address
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email) && email.includes('@') && email.endsWith('.com');
+      }
+
+      let typingTimerPhone;
+      const doneTypingIntervalPhone = 1000; // 1 second
+
+      phoneInput.addEventListener('input', function () {
+        clearTimeout(typingTimerPhone);
+        typingTimerPhone = setTimeout(validatePhoneInput, doneTypingIntervalPhone);
+      });
+
+      phoneInput.addEventListener('blur', function () {
+        clearTimeout(typingTimerPhone);
+        validatePhoneInput();
+      });
+
+      function validatePhoneInput() {
+        const phone = phoneInput.value.trim();
+        if (phone === '') {
+          showErrorToast('Phone number is required.', phoneError, phoneToast);
+        } else if (!validatePhoneNumber(phone)) {
+          showErrorToast('Invalid phone number. It must be 10 digits.', phoneError, phoneToast);
+          disableNextButton();
+        } else {
+          hideErrorToast(phoneError, phoneToast);
+          enableNextButton();
+        }
+      }
+
+      function validatePhoneNumber(phone) {
+        // Regular expression for a 10-digit phone number
+        const phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+      }
+
+      function showErrorToast(message, errorElement, toast) {
+        errorElement.textContent = message;
+        errorElement.classList.add('error-color'); 
+        toast.show();
+      }
+
+      function hideErrorToast(errorElement, toast) {
+        errorElement.textContent = '';
+        errorElement.classList.remove('error-color');
+        toast.hide();
+      }
+
+      function disableNextButton() {
+        document.querySelector('.next').disabled = true;
+      }
+
+      function enableNextButton() {
+        document.querySelector('.next').disabled = false;
+      }
+
+      const passwordInput = document.getElementById('passwordInput');
+               const passwordError = document.getElementById('passwordError');
+
+               let typingTimerPassword;
+               const doneTypingIntervalPassword = 1000; // 1 second
+
+               passwordInput.addEventListener('input', function () {
+                 clearTimeout(typingTimerPassword);
+                 typingTimerPassword = setTimeout(validatePasswordInput, doneTypingIntervalPassword);
+               });
+
+               passwordInput.addEventListener('blur', function () {
+                 clearTimeout(typingTimerPassword);
+                 validatePasswordInput();
+               });
+
+               function validatePasswordInput() {
+                 const password = passwordInput.value.trim();
+                 if (password === '') {
+                   showErrorToast('Password is required.', passwordError);
+                   disableSubmitButton();
+                 } else if (!validatePassword(password)) {
+                   showErrorToast('It must be atleast 8 characters long, contain a capital letter & a special character !@#$%^&*.', passwordError);
+                   
+                   disableSubmitButton();
+
+                 } else {
+                   hideErrorToast(passwordError);
+                   enableSubmitButton();
+                 }
+               }
+
+               function validatePassword(password) {
+                 // Regular expression for password validation
+                 const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,})$/;
+                 return passwordRegex.test(password);
+               }
+
+               function showErrorToast(message, errorElement) {
+                 errorElement.textContent = message;
+                 errorElement.classList.add('error-color');
+               }
+
+               function hideErrorToast(errorElement) {
+                 errorElement.textContent = '';
+                 errorElement.classList.remove('error-color');
+               }
+
+               function disableSubmitButton() {
+                 document.querySelector('.submit').disabled = true;
+               }
+
+               function enableSubmitButton() {
+                 document.querySelector('.submit').disabled = false;
+               }
+
+            const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+            
+            let typingTimerConfirmPassword;
+            const doneTypingIntervalConfirmPassword = 1000; // 1 second
+            
+            confirmPasswordInput.addEventListener('input', function () {
+              clearTimeout(typingTimerConfirmPassword);
+              typingTimerConfirmPassword = setTimeout(validateConfirmPasswordInput, doneTypingIntervalConfirmPassword);
+            });
+            
+            confirmPasswordInput.addEventListener('blur', function () {
+              clearTimeout(typingTimerConfirmPassword);
+              validateConfirmPasswordInput();
+            });
+            
+            function validateConfirmPasswordInput() {
+              const password = document.getElementById('passwordInput').value.trim();
+              const confirmPassword = confirmPasswordInput.value.trim();
+            
+              if (confirmPassword === '') {
+                showErrorToast('Confirm Password is required.', confirmPasswordError);
+                disableSubmitButton();
+              } else if (password !== confirmPassword) {
+                showErrorToast('Passwords do not match.', confirmPasswordError);
+                disableSubmitButton();
+              } else {
+                hideErrorToast(confirmPasswordError);
+                enableSubmitButton();
+              }
+            }
+            document.querySelector('.submit').addEventListener('click', function (event) {
+    // Validate password and confirm password before submitting
+    const password = document.getElementById('passwordInput').value.trim();
+    const confirmPassword = document.getElementById('confirmPasswordInput').value.trim();
+
+    if (!validatePassword(password) || password !== confirmPassword) {
+      showErrorToast('Invalid password or passwords do not match.', passwordError);
+      event.preventDefault(); // Prevent form submission
+    } else {
+      hideErrorToast(passwordError);
+      // Allow form submission
+    }
+  });
+    </script>
+
+    <style>
+      .next:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      .error-color {
+        color: red; /* Adjust the color as needed */
+      }
+      .prev, .submit, .next, .login-link {
+     margin-top: 20px; /* Add space above the Previous and Submit buttons */
+   }
+
+   /* Add style for the Confirm Password field */
+   .field:nth-last-child(2) {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+    </style>
+    
+   </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <header>Login Form</header>
+      <form action="#">
+        <div class="field email">
+          <div class="input-area">
+            <input type="text" placeholder="Email Address">
+            <i class="icon fas fa-envelope"></i>
+            <i class="error error-icon fas fa-exclamation-circle"></i>
+          </div>
+          <div class="error error-txt">Email can't be blank</div>
+        </div>
+        <div class="field password">
+          <div class="input-area">
+            <input type="password" placeholder="Password" id="passwordInput">
+            <i class="icon fas fa-lock"></i>
+            <div class="password-toggle" onclick="togglePasswordVisibility()">
+              <i class="" id=""></i>
+            </div>
+          </div>
+          <div class="error error-txt">Password can't be blank</div>
+        </div>
+        <div class="pass-txt"><a href="#" onclick="openForgotPasswordModal()">Forgot password?</a></div>
+        <input type="submit" value="Login">
+      </form>
+      <div class="sign-txt">Not a member? <a href="signup.html">Signup now</a></div>
+    </div>
+  </div>
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+      <p>Please enter your email address to reset your password:</p>
+      <input type="text" placeholder="Email Address" id="forgotEmail">
+      <button onclick="sendResetEmail()">Send Reset Email</button>
+    </div>
+  </div>
+  <script src="login.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const passwordInput = document.getElementById('passwordInput');
+      const eyeIcon = document.getElementById();
+
+      eyeIcon.addEventListener("click", function() {
+        passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+      });
+    });
+  
+   function openForgotPasswordModal() {
+  const modalContent = document.querySelector('.modal-content');
+  modalContent.classList.add('show');
+  document.getElementById('forgotPasswordModal').style.display = 'block';
+}
+
+    function closeForgotPasswordModal() {
+      document.getElementById('forgotPasswordModal').style.display = 'none';
+    }
+
+    function sendResetEmail() {
+      // Add logic to send reset email here
+      // You can retrieve the email from the input field with id 'forgotEmail'
+      // and implement the necessary steps to send a reset email.
+      alert('Reset email sent!'); // Placeholder alert, replace with actual logic.
+    }
+  </script>
+  <style>
+    /* Add media queries for responsive eye icon size */
+    @media (max-width: 768px) {
+      .password-toggle {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .password-toggle {
+        font-size: 12px;
+      }
+    }
+    /* Style for the modal */
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+
+  .modal-content {
+    background: linear-gradient(to right, #ff9966, #ff5e62); /* Gradient colors */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #fff; /* Text color on the gradient background, adjust as needed */
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .modal-content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  </style>
+</body>
+</html>
